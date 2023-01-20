@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-lg-1 col-md-1 col-sm-2">
+      <div *ngFor="let sec of section_title_list" (click)="scrollTo(sec)" [ngClass]="{ 'highlight': currentSection === sec }">{{sec}}
+      </div>      
+      <br />
+    </div>
+    <div class="col-lg-1 col-md-1"></div>
+    <div class="col-lg-8=6 col-md-6 col-sm-10" style="overflow-y: scroll; height: 350px;" id="parentDiv" scrollSpy
+      [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)" [innerHTML]="api_data.sections" >
+    
+      <br />
+    </div>
+  </div>
+</div>

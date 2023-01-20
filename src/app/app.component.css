@@ -1,0 +1,74 @@
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.highlight {
+  
+  font-weight: bolder;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 5px;
+  cursor: pointer;
+  color:white;
+  background-color: black;  
+  animation: shine 2s ease-in-out  infinite;
+  animation-fill-mode: forwards; 
+  
+}
+
+.highlight::after {   
+  font-weight: lighter; 
+  cursor: pointer;     
+}
+
+@keyframes shine{
+  10% {
+    opacity: .6;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  50% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
+  100% {
+    opacity: .6;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    /* transition-duration: 0.7s, 0.7s, 0.15s; */
+    transition-timing-function: ease;
+  }
+}
+
+body {
+	scroll-behavior: smooth !important;
+  transition: behavior 10s ease-in-out;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
